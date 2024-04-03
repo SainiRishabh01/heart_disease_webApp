@@ -24,10 +24,7 @@ ca = st.slider("number of major vessels (0-3) colored by flourosopy", 0,3)
 thal = st.slider("thal: 0 = normal; 1 = fixed defect; 2 = reversable defect",0,2)
 
 def predict():
-    row = np.array([age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal])
-
-    X = pd.DataFrame([row], columns = columns)
-    prediction = model.predict(X)
+    prediction = model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
     if prediction[0] == 1:
         st.success('Patient has Heart Disease :thumbsup:')
     else:
