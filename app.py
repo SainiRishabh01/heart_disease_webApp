@@ -20,7 +20,7 @@ thalach = st.slider("maximum heart rate achieved",77,212)
 exang = st.slider("exercise induced angina", 0,1)
 oldpeak = st.slider("oldpeak = ST depression induced by exercise relative to rest", 0,7)
 slope = st.slider("the slope of the peak exercise ST segment", 0,2)
-ca = st.slider("number of major vessels (0-3) colored by flourosopy", 0,3)
+ca = st.slider("number of major vessels (0-3) colored by flourosopy", 0,4)
 thal = st.slider("thal: 0 = normal; 1 = fixed defect; 2 = reversable defect",0,2)
 
 def predict():
