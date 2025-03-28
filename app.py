@@ -2,6 +2,9 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+import streamlit as st
 
 model = pickle.load(open('model.pkl','rb'))
 st.title('Heart Disease have or not')
